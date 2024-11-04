@@ -27,12 +27,13 @@ const buttonHandler = async (e) => {
         );
 
         const data = await loggedOut.json();
+        navigate('/login')
 
         if(loggedOut.ok) {
             console.log(data.message);
             
             localStorage.clear();
-            navigate('/frontpage')
+            navigate('/login')
         } else {
             console.log(data.message)
         }
