@@ -16,8 +16,7 @@ const HomePage = () => {
 
     try {
       const savedUserResponse = await fetch(
-        // `${process.env.REACT_APP_BASE_URL}/getfaculty/${search}`,
-        `http://localhost:4000/api/v1/getfaculty/${search}`,
+        `${process.env.REACT_APP_BASE_URL}/getfaculty/${search}`,
         {
           method: 'GET',
           headers: {

@@ -23,8 +23,7 @@ const Signup = () => {
   const submitHandler = async (e) => {
     e.preventDefault();
 
-    // const savedUserResponse = await fetch(`${process.env.REACT_APP_BASE_URL}/signup`, {
-    const savedUserResponse = await fetch(`http://localhost:4000/api/v1/signup`, {
+    const savedUserResponse = await fetch(`${process.env.REACT_APP_BASE_URL}/signup`, {
 
       method: 'POST',
       headers: {

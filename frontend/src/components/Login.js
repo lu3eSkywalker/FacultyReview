@@ -27,8 +27,7 @@ const Login = () => {
     event.preventDefault();
 
     try {
-      // const savedUserResponse = await fetch(`${process.env.REACT_APP_BASE_URL}/login`, {
-      const savedUserResponse = await fetch(`http://localhost:4000/api/v1/login`, {
+      const savedUserResponse = await fetch(`${process.env.REACT_APP_BASE_URL}/login`, {
 
         method: 'POST',
         headers: {

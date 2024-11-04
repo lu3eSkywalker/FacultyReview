@@ -5,7 +5,7 @@ const FacultyPage = () => {
   const navigate = useNavigate();
   const [inputdata, setInputData] = useState('');
   const [reviewdata, setReviewData] = useState([]);
-  
+
   const searchName = localStorage.getItem('searchName');
   const search = JSON.parse(searchName);
 
@@ -15,7 +15,8 @@ const FacultyPage = () => {
 
   const realtimeReview = async () => {
     try {
-      const response = await fetch(`http://localhost:4000/api/v1/getfaculty/${search}`, {
+      const response = await fetch(`${process.env.REACT_APP_BASE_URL}/getfaculty/${search}`, {
+
         method: "GET",
         headers: { "Content-Type": "application/json" }
       });
@@ -37,7 +38,7 @@ const FacultyPage = () => {
     const userName = localStorage.getItem('userName');
 
     try {
-      const response = await fetch(`http://localhost:4000/api/v1/review`, {
+      const response = await fetch(`${process.env.REACT_APP_BASE_URL}/review`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
