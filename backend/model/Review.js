@@ -7,18 +7,15 @@ const reviewSchema = new mongoose.Schema({
     },
     
     userId: {
-        type: mongoose.Schema.Types.ObjectId,
-        required: true,
+        type: mongoose.Schema.Types.ObjectId, required: true,
     },
 
     facultyId: {
-        type: mongoose.Schema.Types.ObjectId,
-        required: true,
+        type: mongoose.Schema.Types.ObjectId, required: true,
     },
     
     review: [{
-        type: String,
-        required: true,
+        type: String, required: true,
     }]
 })
 

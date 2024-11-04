@@ -34,39 +34,16 @@
 const mongoose = require('mongoose');
 
 const facultySchema = new mongoose.Schema({
-    image: {
-        type: String,
-        required: true,
-    },
+    image: {type: String,required: true,},
 
-    title: {
-        type: String,
-        required: true,
-    },
+    title: {type: String,required: true,},
 
-    text: {
-        type: String,
-        required: true,
-    },
-
-    url: {
-        type: String,
-        required: true,
-    },
-
+    text: {type: String,required: true,},
+    url: {type: String,required: true,},
     review: [{
-        review: [{
-            type: String,
-        }]
-        ,
-
-        userId: [{
-            type: String
-        }],
-
-        userName: [{
-            type:String
-        }]
+        review: [{type: String,}],
+        userId: [{type: String}],
+        userName: [{type:String}]
     }]
 
 })
